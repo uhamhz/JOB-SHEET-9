@@ -10,25 +10,27 @@ public class LinearSearch17 {
         int length = input.nextInt();
         int[] arrayInt = new int[length];
         int key;
-        int hasil = 0;
+        int hasil = -1;
 
         for (int i = 0; i < arrayInt.length; i++) {
             System.out.print("Masukan Nilai Elemen Ke-" + (i + 1) + " : ");
             arrayInt[i] = input.nextInt();
         }
 
-        System.out.print("Masukan Nilai key yang Dicari : ");
+        System.out.print("Masukan Nilai yang Dicari : ");
         key = input.nextInt();
 
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
                 hasil = i;
                 break;
-            } else {
-                System.out.println("Key tidak ditemukan");
-                break;
             }
         }
-        System.out.println("Key ada dalam array pada posisi indeks ke-" + hasil);
+
+        if (hasil == -1) {
+            System.out.println("Key Tidak Ditemukan!");
+        } else {
+            System.out.println("Key ada dalam array pada posisi indeks ke-" + hasil);
+        }
     }
 }
