@@ -17,12 +17,15 @@ public class LinearSearch17 {
             arrayInt[i] = input.nextInt();
         }
 
-        System.out.print("Masukan Nilai yang Dicari : ");
+        System.out.print("Masukan Nilai key yang Dicari : ");
         key = input.nextInt();
 
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
                 hasil = i;
+                break;
+            } else {
+                System.out.println("Key tidak ditemukan");
                 break;
             }
         }
